@@ -1,0 +1,31 @@
+Project pom has:
+    A.TestNg
+    B.Rest Assured
+    C.Rest Assured -> json-path
+    D.json-schema-validator
+    E.extentreports
+    F.aventstack -> extentreports
+    G.relevantcodes -> extentreports
+    E.json
+    F.commons-io
+
+1.Create all the directories
+
+2.Create folder for runnable environments(local,dev,prod) which have different files for different environments (local.properties)
+
+3.Now create a file(EnvFiles) in utils which will read all the env(local.properties) file information's.
+
+4.Create APIPath which will hold all the endpoints of the api.
+
+5.Create HeadConfigs which will hold all the headers information's.
+
+6.Create ExtentReportListner under utils package
+
+7.Create BaseTest to get the URL and other data's from the envfiles class
+
+8.Create GetApiTest which will hit the URL and receive the result. Then we need to verify the result.
+
+    A.Need to create another class which will verify the response the we get from the GET url (ApiVerification)
+
+9.PostApiTest will hit the URL with header and body information. Need to create a seperate class which will hold the body data's.
+
