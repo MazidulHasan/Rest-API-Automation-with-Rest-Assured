@@ -40,7 +40,8 @@ public class GetApiTest extends BaseTest {
         AllUsers allUsers = given().when().get(APIPath.apiPath.GET_LIST_OF_USERS).as(AllUsers.class);
         List<Datum> datum = allUsers.getData();
         for (int i =0; i<datum.size();i++){
-            System.out.println("The data is "+ datum.get(i));
+            System.out.println("First Name is : "+ datum.get(i).getFirstName());
+            System.out.println("Email is : "+ datum.get(i).getEmail());
         }
     }
 
